@@ -22,6 +22,18 @@
             background-color: rgb(49, 153, 118); 
         }
 
+        .accordion:after {
+            content: '\002B';
+            color: #777;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+
+.active:after {
+  content: "\2212";
+}
+
         .panel {
             padding: 0 18px;
             display: none;
@@ -97,6 +109,11 @@
         </div>
         
         <script>
+            /*This Javascript code is directly from the W3Schools.com tutorial "How TO - Collasibles/Accordian";
+            link: https://www.w3schools.com/howto/howto_js_accordion.asp ;
+            I do not take credit for this piece of code;
+            I am using it as a means to show how I would want my TC content to be displayed online. */
+
             var acc = document.getElementsByClassName("accordion");
             var i;
             
