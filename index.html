@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
     <head>
-        <title>Chapter 4</title>
+    <title>Chapter 4</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://kit.fontawesome.com/67ddfec8ad.js" crossorigin="anonymous"></script>
     </head>
@@ -11,93 +11,124 @@
             background-color: white;
             color: black;
             font-family: Helvetica, Arial, sans-serif;
-            font-size: 2vw;
-            margin: 2vw 1vw 2vw 1vw;
-        
+            font-size: 2vw;       
         }
-
         h1 {
+            margin: 5% 1% 1% 1%;
             font-size: 5vw;
         }
-
         h2 {
+            margin: 5% 1% 1% 5%;
             font-size: 4vw;
         }
-
         h3 {
+            margin: 5% 1% 0% 10%;
             font-size: 3vw;
         }
-
-        
-
+        #chapterintro {
+            margin: 2% 1% 1% 1%;
+        }
+        #chapterinfoxref {
+            margin: 1% 1% 1% 1%;
+            font-size: 1.5vw;
+        }
+        #sectionintro {
+            margin: 2% 1% 1% 5%;
+        }
+        #hazardwarning {
+            margin: 1% 1% 1% 5%;
+            font-size: 1.5vw;
+        }
+        #textdisplaysteps {
+            margin: 1.5% 1% 1% 10%;
+        }
+        #textlayoutmenu {
+            width: 75%;
+            height: auto;
+            margin: 1% 1% -1% 10%
+        }
+        #introaccordion {
+            margin: 1.5% 1% 1% 10%;
+        }
+        li {
+            padding: 0% 0% 1.5% 0%;
+        }
         .accordion {
-            background-color: rgb(255, 255, 255);
+            background-color: hsl(160, 88%, 86%);
             color: rgb(175, 169, 169)
             cursor: pointer;
-            padding: 18px;
-            width: 80%;
+            padding: 2%;
+            width: 88%;
+            margin: 1% 1% 1% 10%;
             border: 2px solid black;
             text-align: left;
             outline: none;
             font-size: 2vw;
             transition: 0.4s;
         }
-
         .active, .accordion:hover {
-            background-color: rgb(49, 153, 118); 
+            background-color: hsl(6, 88%, 93%); 
         }
-
         .accordion:after {
             content: '\002B';
             color: rgb(0, 0, 0);
             font-weight: bold;
             float: right;
-            margin-left: 5px;
+            margin: 0% 1% 1% 7%;
         }
-
         .active:after {
             content: "\2212";
         }
-
         .panel {
             padding: 0 18px;
             display: none;
-            background-color: white;
+            background-color:white;
             overflow: hidden;
+            margin: 0% 1% 1% 9%;
         }
-
-
+        .onepanel {
+            width: 37%;
+            height: auto;
+            margin: 0% 1% 1% 3%;
+        }
+        .twopanel {
+            width: 75%;
+            height: auto;
+            margin: 0% 1% 1% 3%;
+        }
     </style>
 
     <body>
         <header>
             <h1>Chapter 4: Reading Daintree Documents</h1>
-            <p>
+            <p id="chapterintro">
                 Optimize your Daintree E-Reader's settings to enjoy a comfortable, intuitive reading experience.
-                <i>For information about using the touch display to download and view documents, see</i> Navigating Your Daintree E-Reader
+            </p>
+            <p id="chapterinfoxref">
+                For information about using the touch display to download and view documents, see Navigating Your Daintree E-Reader.
             </p>
         </header>
         <header>
             <h2>Customize Text Display</h2>
-            <p>
+            <p id="sectionintro">
                 To adjust the appearance of content to match your specific reading situation and preferences, use the <b>Text Display</b> menu.
+            </p>
+            <p id="hazardwarning">
                 <b><i class="fas fa-exclamation-circle"></i>Important</b>: Changes you make to the <b>Text Display</b> settings are device-wide; they apply to all books in your Daintree Library.
             </p>
         </header>
         <header>
             <h3>Access the Text Display Menu</h3>
         </header>
-            <p>
-                <ol>
-                    <li>Open a book or document from your Daintree Library. <i>For help accessing content in the Daintree Library, see</i> Managing Content.</li>
-                    <li>Tap the top of the screen to display the toolbar.</li>
-                    <li>Tap the <b>Text Display</b> icon to open the <b>Text Display</b> menu.</li>
-                </ol>
-            </p>
-            <img src="/Daintree Images/Text Layout Menu.png" alt="Text Layou Menu" width="100%" height="100%">
+            <ol id="textdisplaysteps">
+                <li>Open a book or document from your Daintree Library. <br><i>For help accessing content in the Daintree Library, see</i> Managing Content.</li>
+                <li>Tap the top of the screen to display the toolbar.</li>
+                <li>Tap the <b>Text Display</b> icon to open the <b>Text Display</b> menu.</li>
+            </ol>
+            <img class="twopanel" id="textlayoutmenu" src="/jbucien.github.io/Daintree Images/Text Layout Menu.png" alt="Text Layout Menu">
         <header>
-            <h3>After Opening the Text Display Menu</h3>
-            <p>Choose to do any of the following:</p>
+            <h3>Style Options in the Text Display Menu</h3>
+            <p id="introaccordion"><b>Choose to do any of the following:</b></p>
         </header>
         
         <button class="accordion">Change the font style, weight, or size.</button>
@@ -111,7 +142,7 @@
                         <li><i>Size</i>: Tap the <span class="fas fa-chevron-right"></span> arrow to the right of <b>Size</b>. Then tap the plus sign to increase the font size or the minus sign to decrease the font size.</li>
                     </ul>
             </ol>
-            <img src="Daintree Images/Changing Font.png" alt="Changing Font Settings" width="100%" height="100%">
+            <img class="twopanel" src="/jbucien.github.io/Daintree Images/Changing Font.png" alt="Changing Font Settings">
         </div>
 
         <button class="accordion">Adjust the page orientation or page margins.</button>
@@ -124,7 +155,7 @@
                         <li><i>Page Margins</i>: Below <b>Margins</b>, tap to select narrow, regular, or wide margins.</li>
                     </ul>
             </ol>
-            <img src="/Daintree Images/Page Orientations and Margins.png" alt="Changing Page Orientations and Margins" width="100%" height="100%">
+            <img class="onepanel" src="/jbucien.github.io/Daintree Images/Page Orientations and Margins.png" alt="Changing Page Orientations and Margins">
         </div>
 
         <button class="accordion">Adjust the text alignment or line spacing.</button>
@@ -137,7 +168,7 @@
                         <li><i>Page Margins</i>: Below <b>Spacing</b>, tap to select narrow, regular, or wide spacing.</li>
                     </ul>
             </ol>
-            <img src="/Daintree Images/Text Alignment and Line Spacing.png" alt="Changing Page Text Alignment and Line Spacing" width="100%" height="100%">
+            <img class="onepanel" src="/jbucien.github.io/Daintree Images/Text Alignment and Line Spacing.png" alt="Changing Page Text Alignment and Line Spacing">
         </div>
 
         <button class="accordion">Change the type of Reading Progress bar.</button>
@@ -145,9 +176,9 @@
             <ol>
                 <li>Tap the <b>More</b> tab.</li>
                 <li>Tap the <span class="fas fa-chevron-right"></span> arrow located to the right of <b>Reading Progress</b> to open the <b>Reading Progress</b> menu.</li>
-                <li>Tap the circle to select the type of <b>Reading Progress</b> bar displayed when reading.  <i>For more information about <b>Reading Progress</b>, see</i> Navigating Your Daintree E-Reader.</li>
+                <li>Tap the circle to select the type of <b>Reading Progress</b> bar displayed when reading.  <br><i>For more information about <b>Reading Progress</b>, see</i> Navigating Your Daintree E-Reader.</li>
             </ol>
-            <img src="/Daintree Images/Reading Project Tab.png" alt="Changing Type of Reading Progress Bar" width="100%" height="100%">
+            <img class="twopanel" src="/jbucien.github.io/Daintree Images/Reading Project Tab.png" alt="Changing Type of Reading Progress Bar">
         </div>
 
         <button class="accordion">Turn the clock display ON/OFF when reading.</button>
@@ -156,7 +187,7 @@
                 <li>Tap on the <b>More</b> tab.</li>
                 <li>Tap on the <span class="fas fa-toggle-on"></span> button to the right of <b>Show Clock When Reading</b> to toggle the clock display <i>ON/OFF</i>.</li>
             </ol>
-            <img src="/Daintree Images/Show Clock When Reading.png" alt="Clock Display When Reading" width="100%" height="100%">
+            <img class="onepanel" src="/jbucien.github.io/Daintree Images/Show Clock When Reading.png" alt="Clock Display When Reading">
         </div>
 
         <button class="accordion">Turn the special Daintree reading features ON/OFF.</button>
@@ -171,7 +202,7 @@
                         <li>Highlight Menu</li>
                     </ul>
             </ol>
-            <img src="/Daintree Images/Daintree Special Reading Features.png" alt="Turning the Daintree Special Features ON/OFF" width="100%" height="100%">
+            <img class="onepanel" src="/jbucien.github.io/Daintree Images/Daintree Special Reading Features.png" alt="Turning the Daintree Special Features ON/OFF">
         </div>
 
         <button class="accordion">Turn Word Wise ON/OFF.</button>
@@ -183,7 +214,7 @@
                 <li>Tap the <span class="fas fa-toggle-on"></span> button to the right of <b>Word Wise</b> to toggle it <i>ON/OFF</i>.</li>
                 <li>If <b>Word Wise</b> is <i>ON</i>, you can also tap to select <b>Show Multiple-Choice Hints</b> or choose a <b>Language*</b>.</li>
             </ol>
-            <img src="/Daintree Images/WordWise.png" alt="Turning Word Wise ON/OFF" width="100%" height="100%">
+            <img class="twopanel" src="/jbucien.github.io/Daintree Images/WordWise.png" alt="Turning Word Wise ON/OFF">
             <p><i>For more information about <b>Word Wise</b>, click</i> here <i>or see</i> Features.</p>
             <p><i>*Multiple languages are only available if you have dowloaded an external</i> Word Wise Language Pack.</p>
         </div>
@@ -201,7 +232,7 @@
                     </ul>
                 <li>Tap <b>Save</b>.</li>
             </ol>
-            <img src="/Daintree Images/Create Custom Theme.png" alt="Creating a Custom Text Display Theme" width="100%" height="100%">
+            <img class="twopanel" src="/jbucien.github.io/Daintree Images/Create Custom Theme.png" alt="Creating a Custom Text Display Theme">
         </div>
 
         <button class="accordion">Rename or delete a custom theme.</button>
@@ -213,7 +244,7 @@
                 <li>Tap on the <span class="fas fa-pencil-alt"></span> icon to <b>Rename Theme</b>, or tap on the <span class="far fa-trash-alt"></span> icon to <b>Delete Theme</b>.</li>
                 <li>Tap <b>Save</b>.</li>
             </ol>
-            <img src="/Daintree Images/Edit or Delete Theme.png" alt="Rename or Delete a Custom Theme" width="100%" height="100%">
+            <img class="twopanel" src="/jbucien.github.io/Daintree Images/Edit or Delete Theme.png" alt="Rename or Delete a Custom Theme">
         </div>
 
         <button class="accordion">Select a preset Text Display theme.</button>
@@ -222,7 +253,7 @@
                 <li>Tap on the <b>Themes</b> tab.</li>
                 <li>Tap to select one of the 4 preset themes: <b>Compact, Standard, Large,</b> or <b>Low Vision</b>.</li>
             </ol>
-            <img src="/Daintree Images/Setting Preset Theme.png" alt="Selecting a Preset Text Display Theme" width="100%" height="100%">
+            <img class="twopanel" src="/jbucien.github.io/Daintree Images/Setting Preset Theme.png" alt="Selecting a Preset Text Display Theme">
             <p>
                 <i>If you do not see any of the preset theme options in the <b>Themes</b> tab, tap on the <span class="fas fa-chevron-right"></span> arrow at the bottom of the screen to open the <b>Manage Themes</b> menu. Then tap the <span class="fas fa-toggle-on"></span> button to the right of the theme menu to toggle it</i> ON/OFF. <i>Themes toggled</i> OFF <i>are not visible in the <b>Themes</b> tab</i>.
             </p>
