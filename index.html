@@ -7,27 +7,75 @@
     </head>
 
     <style>
+        * { margin: 0, padding: 0 }
         body {
             background-color: white;
             color: black;
             font-family: Helvetica, Arial, sans-serif;       
         }
-/* HEADING STYLING */
-        .header {
-            /* padding: 10px 1% 10px 1%; */
+/* HEADER AND DROPDOWN STYLING */
+.header {
+            overflow: visible;
             width: 100%;
-            background: hsl(160, 88%, 86%);
-            color: #000000;
-            }
-        #chapter4 {
-            margin: 20px 2px 30px 2px;
-            font-size: 2em;
-            font-variant: small-caps;
-        }    
-        #backtomain {
-            font-size: 1em;
-        }    
-
+            height: 80px;
+            background-color: hsl(160, 88%, 86%);
+            padding: 15px 15px;
+            margin: -1% -1%;
+        }
+        .header a {
+            float: left;
+            padding: 2px;
+            border-radius: 2px;
+        }
+        .img-container {
+            width: 90px;
+            height: 90px;
+            overflow: hidden;
+        }
+        #logo {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            object-position: -30px -30px;
+        }
+        .header a:hover {
+            background-color: #4e4e4e39;
+            color: black;
+        }
+        .dropdown-button {
+            background-color:#00C2CB;
+            color: rgb(0, 0, 0);
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        .header-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color:#5272ffac;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {background-color: #00C2CB}
+        .header-dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .header-dropdown:hover .dropdown-button {
+            background-color:#5271FF;
+        }
+/* HEADING STYLING */
         h1 {
             margin: 20px 2px 30px 2px;
             font-size: 3em;
@@ -40,7 +88,6 @@
             margin: 32px 2px 20px 80px;
             font-size: 1.5em;
         }
-
 /*INTRO BODY TEXT STYLING */
         #chapterintro {
             margin: 4px 2px 2px 25px;
@@ -139,9 +186,26 @@
 
     <body>
         <header>
-            <div class="header" id="chapter"><h2 id="chapter4">Daintree E-Reader User Guide: Chapter 4</h2>
-            <a id="backtomain" href="linklanding.html">Go Back to Table of Contents</a></div>
+            <div class="header">
+                <a href="linklanding.html">
+                    <div class="img-container">
+                        <img id="logo" src="Daintree Images/DAINTREE.png" alt="Daintree Logo">
+                    </div>
+                </a>
+                <div class="header-dropdown">
+                    <button class="dropdown-button">User Guide Chapters</button>
+                    <div class="dropdown-content">
+                        <a href="linklanding.html">1: Getting Started</a>
+                        <a href="linklanding.html">2: Navigating Your Daintree E-Reader</a>
+                        <a href="linklanding.html">3: Managing Content</a>
+                        <a href="index.html">4: Reading on Your Daintree E-Reader</a>
+                        <a href="linklanding.html">5: Special Features</a>
+                        <a href="linklanding.html">6: Troubleshooting</a>
+                    </div>
+                </div>    
+            </div>
         </header>
+        <main>
             <h1>Reading on Your Daintree E-Reader</h1>
             <p id="chapterintro">
                 Optimize your Daintree E-Reader's settings to enjoy a comfortable, intuitive reading experience.
@@ -290,8 +354,7 @@
             <p>
 
             </p>
-        </div>
-        
+        </div>      
         <script>
             /*This Javascript code is directly from the W3Schools.com tutorial "How TO - Collasibles/Accordian";
             link: https://www.w3schools.com/howto/howto_js_accordion.asp ;
@@ -313,6 +376,6 @@
               });
             }
             </script>
-            
+        </main>
     </body>
 </html>
