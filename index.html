@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
-    <title>Chapter 4</title>
+        <title>Chapter 4</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://kit.fontawesome.com/67ddfec8ad.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
     </head>
 
     <style>
@@ -11,28 +14,30 @@
         body {
             background-color: white;
             color: black;
-            font-family: Helvetica, Arial, sans-serif;       
+            font-family: "Inter", "Helvetica", sans-serif;     
         }
 /* HEADER AND DROPDOWN STYLING */
-.header {
+        .header {
             overflow: visible;
             width: 100%;
-            height: 80px;
+            height: auto;
             background-color: hsl(160, 88%, 86%);
-            padding: 15px 15px;
+            padding: 20px 15px;
             margin: -1% -1%;
         }
-        .header a {
-            float: left;
-            padding: 2px;
-            border-radius: 2px;
+        #logolink {
+            float: right;
+            padding: 0px;
+            border-radius: 10px;
         }
         .img-container {
+            float: right;
             width: 90px;
             height: 90px;
             overflow: hidden;
         }
         #logo {
+            float: right
             width: 150px;
             height: 150px;
             object-fit: cover;
@@ -43,10 +48,11 @@
             color: black;
         }
         .dropdown-button {
-            background-color:#00C2CB;
-            color: rgb(0, 0, 0);
-            padding: 16px;
-            font-size: 16px;
+            background-color: inherit;
+            color: #4e4e4e;
+            padding: 25px 0px 10px 15px;
+            font-size: 1.8em;
+            font-weight: bold;
             border: none;
             cursor: pointer;
         }
@@ -55,38 +61,44 @@
             display: inline-block;
         }
         .dropdown-content {
+            text-align: left;
             display: none;
             position: absolute;
-            background-color:#5272ffac;
-            min-width: 160px;
+            background-color: hsla(225, 59%, 62%);
+            width: 100%;
+            overflow: auto;
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
             z-index: 1;
+            font-size: 1.2em;
         }
         .dropdown-content a {
-            color: black;
+            color: #4e4e4e;
             padding: 12px 16px;
             text-decoration: none;
             display: block;
         }
-        .dropdown-content a:hover {background-color: #00C2CB}
+        .dropdown-content a:hover {background-color: #004bad76}
         .header-dropdown:hover .dropdown-content {
             display: block;
         }
         .header-dropdown:hover .dropdown-button {
-            background-color:#5271FF;
+            background-color:#5272ff3a;
         }
 /* HEADING STYLING */
         h1 {
             margin: 20px 2px 30px 2px;
             font-size: 3em;
+            font-weight: 700;
         }
         h2 {
-            margin: 45px 2px 20px 40px;
+            margin: 45px 2px 20px 25px;
             font-size: 2em;
+            font-weight: 700;
         }
         h3 {
-            margin: 32px 2px 20px 80px;
+            margin: 32px 2px 20px 45px;
             font-size: 1.5em;
+            font-weight: 700;
         }
 /*INTRO BODY TEXT STYLING */
         #chapterintro {
@@ -99,20 +111,30 @@
             font-style: italic
         }
         #sectionintro {
-            margin: 2px 2px 2px 62px;
+            margin: 2px 2px 2px 45px;
         }
         #hazardwarning {
-            margin: 8px 2px 2px 62px;
+            margin: 8px 2px 2px 45px;
             font-size: .9em;
         }
         #textdisplaysteps {
-            margin: 2px 2px 2px 102px;
+            margin: 2px 2px 2px 60px;
         }
 
         #introaccordion {
-            margin: 2px 2px 2px 102px;
+            margin: 2px 2px 2px 60px;
             font-size: 1.2em;
             font-weight: bold;
+        }
+/* TEXT STYLING */
+        em {
+            font-weight: 700;
+            font-style: normal;
+        }
+        mark {
+            font-weight: 600;
+            background-color: white;
+            color: black;
         }
 /* LIST STYLING */
         li {
@@ -138,11 +160,12 @@
             cursor: pointer;
             padding: 1.5%;
             width: 89%;
-            margin: 2px 2px 2px 102px;
+            margin: 2px 2px 2px 60px;
             border: 2px solid black;
             text-align: left;
             outline: none;
             font-size: 1.1em;
+            font-weight: 500;
             transition: 0.4s;
         }
         .active, .accordion:hover {
@@ -153,7 +176,7 @@
             color: rgb(0, 0, 0);
             font-weight: bold;
             float: right;
-            margin: 2px 2px 2px 102px;
+            margin: 2px 2px 2px 60px;
         }
         .active:after {
             content: "\2212";
@@ -163,21 +186,24 @@
             display: none;
             background-color:white;
             overflow: hidden;
-            margin: 2px 2px 2px 102px;
+            margin: 2px 2px 2px 70px;
         }
 
 /* IMAGE STYLING */
         .twopanel {
+            min-width: 500px;
             max-width: 60%;
             height: auto;
             margin: 2px 2px 10px 27px;
         }
         #textlayoutmenu {
+            min-width: 500px;
             max-width: 60%;
             height: auto;
             margin: 2px 2px 4px 115px;
         }
         .onepanel {
+            min-width: 250px;
             max-width: 30%;
             height: auto;
             margin: 2px 2px 10px 27px;
@@ -187,26 +213,25 @@
     <body>
         <header>
             <div class="header">
-                <a href="linklanding.html">
+                <a class="logolink" href="linklanding.html">
                     <div class="img-container">
                         <img id="logo" src="Daintree Images/DAINTREE.png" alt="Daintree Logo">
                     </div>
                 </a>
                 <div class="header-dropdown">
-                    <button class="dropdown-button">User Guide Chapters</button>
+                    <button class="dropdown-button">The Daintree E-Reader User Guide <i class="fa fa-caret-down"></i> </button>
                     <div class="dropdown-content">
                         <a href="linklanding.html">1: Getting Started</a>
                         <a href="linklanding.html">2: Navigating Your Daintree E-Reader</a>
                         <a href="linklanding.html">3: Managing Content</a>
                         <a href="index.html">4: Reading on Your Daintree E-Reader</a>
                         <a href="linklanding.html">5: Special Features</a>
-                        <a href="linklanding.html">6: Troubleshooting</a>
                     </div>
                 </div>    
             </div>
         </header>
         <main>
-            <h1>Reading on Your Daintree E-Reader</h1>
+            <h1>4: Reading on Your Daintree E-Reader</h1>
             <p id="chapterintro">
                 Optimize your Daintree E-Reader's settings to enjoy a comfortable, intuitive reading experience.
             </p>
@@ -215,16 +240,16 @@
             </p>
             <h2>Customize Text Display</h2>
             <p id="sectionintro">
-                To adjust the appearance of content to match your specific reading situation and preferences, use the <b>Text Display</b> menu.
+                To adjust the appearance of content to match your specific reading situation and preferences, use the <em>Text Display</em> menu.
             </p>
             <p id="hazardwarning">
-                <b><i class="fas fa-exclamation-circle"></i>Important</b>: Changes you make to the <b>Text Display</b> settings are device-wide; they apply to all books in your Daintree Library.
+                <span class="fas fa-exclamation-circle"> </span> <em>Important</em>: Changes you make to the <em>Text Display</em> settings are device-wide; they apply to all books in your Daintree Library.
             </p>
             <h3>Access the Text Display Menu</h3>
             <ol id="textdisplaysteps">
                 <li>Open a book or document from your Daintree Library. <p class="smaller">For help accessing content in the Daintree Library, see <a href="linklanding.html">Chapter 3: Managing Content</a>.</p></li>
                 <li>Tap the top of the screen to display the toolbar.</li>
-                <li>Tap the <b>Text Display</b> icon to open the <b>Text Display</b> menu.</li>
+                <li>Tap the <em>Text Display</em> icon to open the <em>Text Display</em> menu.</li>
             </ol>
             <img class="twopanel" id="textlayoutmenu" src="Daintree Images/Text Layout Menu.png" alt="Text Layout Menu">
             <h3>Style Options in the Text Display Menu</h3>
@@ -233,12 +258,12 @@
         <button class="accordion">Change the font style, weight, or size.</button>
         <div class="panel">
             <ol>
-                <li>Tap on the <b>Font</b> tab.</li>
+                <li>Tap on the <em>Font</em> tab.</li>
                 <li>See the instructions below to change any of the following:</li>
                     <ul>
-                        <li class="unordered"><i>Style</i>: Tap the <span class="fas fa-chevron-right"></span> arrow to the right of <b>Font Family</b>. Then tap the circle to select a font style.</li>
-                        <li class="unordered"><i>Weight</i>: Tap the <span class="fas fa-chevron-right"></span> arrow to the right of <b>Bold</b>. Then tap the plus sign to increase the font weight or the minus sign to decrease the font weight.</li>
-                        <li class="unordered"><i>Size</i>: Tap the <span class="fas fa-chevron-right"></span> arrow to the right of <b>Size</b>. Then tap the plus sign to increase the font size or the minus sign to decrease the font size.</li>
+                        <li class="unordered"><mark>Style</mark>: Tap the <span class="fas fa-chevron-right"></span> arrow to the right of <em>Font Family</em>. Then tap the circle to select a font style.</li>
+                        <li class="unordered"><mark>Weight</mark>: Tap the <span class="fas fa-chevron-right"></span> arrow to the right of <em>Bold</em>. Then tap the plus sign to increase the font weight or the minus sign to decrease the font weight.</li>
+                        <li class="unordered"><mark>Size</mark>: Tap the <span class="fas fa-chevron-right"></span> arrow to the right of <em>Size</em>. Then tap the plus sign to increase the font size or the minus sign to decrease the font size.</li>
                     </ul>
             </ol>
             <img class="twopanel" src="Daintree Images/Changing Font.png" alt="Changing Font Settings">
@@ -247,11 +272,11 @@
         <button class="accordion">Adjust the page orientation or page margins.</button>
         <div class="panel">
             <ol>
-                <li>Tap the <b>Layout</b> tab.</li>
+                <li>Tap the <em>Layout</em> tab.</li>
                 <li>See the instructions below to change any of the following:</li>
                     <ul>
-                        <li class="unordered"><i>Page Orientation</i>: Below <b>Orientation</b>, tap to select portrait or landscape mode.</li>
-                        <li class="unordered"><i>Page Margins</i>: Below <b>Margins</b>, tap to select narrow, regular, or wide margins.</li>
+                        <li class="unordered"><mark>Page Orientation</mark>: Below <em>Orientation</em>, tap to select portrait or landscape mode.</li>
+                        <li class="unordered"><mark>Page Margins</mark>: Below <em>Margins</em>, tap to select narrow, regular, or wide margins.</li>
                     </ul>
             </ol>
             <img class="onepanel" src="Daintree Images/Page Orientations and Margins.png" alt="Changing Page Orientations and Margins">
@@ -260,11 +285,11 @@
         <button class="accordion">Adjust the text alignment or line spacing.</button>
         <div class="panel">
             <ol>
-                <li>Tap the <b>Layout</b> tab.</li>
+                <li>Tap the <em>Layout</em> tab.</li>
                 <li>See the instructions below to change any of the following:</li>
                     <ul>
-                        <li class="unordered"><i>Text Alignment</i>: Below <b>Alignment</b>, tap to select justified or left-aligned text.</li>
-                        <li class="unordered"><i>Page Margins</i>: Below <b>Spacing</b>, tap to select narrow, regular, or wide spacing.</li>
+                        <li class="unordered"><mark>Text Alignment</mark>: Below <em>Alignment</em>, tap to select justified or left-aligned text.</li>
+                        <li class="unordered"><mark>Page Margins</mark>: Below <em>Spacing</em>, tap to select narrow, regular, or wide spacing.</li>
                     </ul>
             </ol>
             <img class="onepanel" src="Daintree Images/Text Alignment and Line Spacing.png" alt="Changing Page Text Alignment and Line Spacing">
@@ -273,9 +298,9 @@
         <button class="accordion">Change the type of Reading Progress bar.</button>
         <div class="panel">
             <ol>
-                <li>Tap the <b>More</b> tab.</li>
-                <li>Tap the <span class="fas fa-chevron-right"></span> arrow located to the right of <b>Reading Progress</b> to open the <b>Reading Progress</b> menu.</li>
-                <li>Tap the circle to select the type of <b>Reading Progress</b> bar displayed when reading.
+                <li>Tap the <em>More</em> tab.</li>
+                <li>Tap the <span class="fas fa-chevron-right"></span> arrow located to the right of <em>Reading Progress</em> to open the <em>Reading Progress</em> menu.</li>
+                <li>Tap the circle to select the type of <em>Reading Progress</em> bar displayed when reading.
             </ol>
             <img class="twopanel" src="Daintree Images/Reading Project Tab.png" alt="Changing Type of Reading Progress Bar">
         </div>
@@ -283,8 +308,8 @@
         <button class="accordion">Turn the clock display ON/OFF when reading.</button>
         <div class="panel">
             <ol>
-                <li>Tap on the <b>More</b> tab.</li>
-                <li>Tap on the <span class="fas fa-toggle-on"></span> button to the right of <b>Show Clock When Reading</b> to toggle the clock display ON/OFF.</li>
+                <li>Tap on the <em>More</em> tab.</li>
+                <li>Tap on the <span class="fas fa-toggle-on"></span> button to the right of <em>Show Clock When Reading</em> to toggle the clock display ON/OFF.</li>
             </ol>
             <img class="onepanel" src="Daintree Images/Show Clock When Reading.png" alt="Clock Display When Reading">
         </div>
@@ -292,13 +317,13 @@
         <button class="accordion">Turn the special Daintree reading features ON/OFF.</button>
         <div class="panel">
             <ol>
-                <li>Tap on the <b>More</b> tab.</li>
+                <li>Tap on the <em>More</em> tab.</li>
                 <li>For the any of the features listed below, tap on the <span class="fas fa-toggle-on"></span> button to the right of the feature's name to toggle it ON/OFF.<p class="smaller">If you don't see a feature listed, swipe down to move the scroll bar further down the list. <br>For more information about a specific reading feature, click on its name below.</p></li>
                     <ul>
-                        <li class="unordered"><a href="linklanding.html">Book Mentions</a></li>
-                        <li class="unordered"><a href="linklanding.html">About This Book</a></li>
-                        <li class="unordered"><a href="linklanding.html">Popular Highlights</a></li>
-                        <li class="unordered"><a href="linklanding.html">Popular Highlights</a></li>
+                        <li class="unordered"><em><a href="linklanding.html">Book Mentions</a></em></li>
+                        <li class="unordered"><em><a href="linklanding.html">About This Book</a></em></li>
+                        <li class="unordered"><em><a href="linklanding.html">Popular Highlights</a></em></li>
+                        <li class="unordered"><em><a href="linklanding.html">Popular Highlights</a></em></li>
                     </ul>
             </ol>
             <img class="onepanel" src="Daintree Images/Daintree Special Reading Features.png" alt="Turning the Daintree Special Features ON/OFF">
@@ -307,11 +332,11 @@
         <button class="accordion">Turn Word Wise ON/OFF.</button>
         <div class="panel">
             <ol>
-                <li>Tap on the <b>More</b> tab.</li>
-                <li>Swipe down the list of settings until you see <b>Word Wise</b>.
-                <li>Tap the <span class="fas fa-chevron-right"></span> arrow to the right of <b>Word Wise</b> to open the <b>Word Wise</b> menu.</li>
-                <li>Tap the <span class="fas fa-toggle-on"></span> button to the right of <b>Word Wise</b> to toggle it ON/OFF.</li>
-                <li>If <b>Word Wise</b> is ON, you can also tap to select <b>Show Multiple-Choice Hints</b> or choose a <b>Language*</b>.<p class="smaller">For more information about <b>Word Wise</b>, click <a href="linklanding.html">here</a>.<br>*Multiple languages are only available if you have dowloaded an external <a href="linklanding.html">Word Wise Language Pack</a>.</p></li>
+                <li>Tap on the <em>More</em> tab.</li>
+                <li>Swipe down the list of settings until you see <em>Word Wise</em>.
+                <li>Tap the <span class="fas fa-chevron-right"></span> arrow to the right of <em>Word Wise</em> to open the <em>Word Wise</em> menu.</li>
+                <li>Tap the <span class="fas fa-toggle-on"></span> button to the right of <em>Word Wise</em> to toggle it ON/OFF.</li>
+                <li>If <em>Word Wise</em> is ON, you can also tap to select <em>Show Multiple-Choice Hints</em> or choose a <em>Language</em>*.<p class="smaller">For more information about <em>Word Wise</em>, click <a href="linklanding.html">here</a>.<br>*Multiple languages are only available if you have dowloaded an external <a href="linklanding.html">Word Wise Language Pack</a>.</p></li>
             </ol>
             <img class="twopanel" src="Daintree Images/WordWise.png" alt="Turning Word Wise ON/OFF">
         </div>
@@ -319,15 +344,15 @@
         <button class="accordion">Save your current Text Display settings as a custom theme.</button>
         <div class="panel">
             <ol>
-                <li>Tap on the <b>Themes</b> tab.</li>
-                <li>Tap on <b>Custom</b> to select it as the current theme.
-                <li>Tap on <b>Save Current Settings</b>.</li>
-                <li>In the <b>Save Current Settings</b> menu, choose to do one of the following:</li>
+                <li>Tap on the <em>Themes</em> tab.</li>
+                <li>Tap on <em>Custom</em> to select it as the current theme.
+                <li>Tap on <em>Save Current Settings</em>.</li>
+                <li>In the <em>Save Current Settings</em> menu, choose to do one of the following:</li>
                     <ul>
-                        <li class="unordered"><i>Update an Existing Theme</i>: Select the custom theme that you want to update with the current <b>Text Display</b> settings by tapping on the circle next to its name.</li>
-                        <li class="unordered"><i>Create a New Theme</i>: Tap on the circle next to <b>Create a New Theme</b>. Use the keyboard to type a name for your theme.</li>
+                        <li class="unordered"><mark>Update an Existing Theme</mark>: Select the custom theme that you want to update with the current <em>Text Display</em> settings by tapping on the circle next to its name.</li>
+                        <li class="unordered"><mark>Create a New Theme</mark>: Tap on the circle next to <em>Create a New Theme</em>. Use the keyboard to type a name for your theme.</li>
                     </ul>
-                <li>Tap <b>Save</b>.</li>
+                <li>Tap <em>Save</em>.</li>
             </ol>
             <img class="twopanel" src="Daintree Images/Create Custom Theme.png" alt="Creating a Custom Text Display Theme">
         </div>
@@ -335,11 +360,11 @@
         <button class="accordion">Rename or delete a custom theme.</button>
         <div class="panel">
             <ol>
-                <li>Tap on the <b>Themes</b> tab.</li>
-                <li>Tap on the <span class="fas fa-chevron-right"></span> arrow to display the <b>Manage Themes</b> menu.</li>
-                <li>Tap on <b>Save Current Settings</b>.</li>
-                <li>Tap on the <span class="fas fa-pencil-alt"></span> icon to <b>Rename Theme</b>, or tap on the <span class="far fa-trash-alt"></span> icon to <b>Delete Theme</b>.</li>
-                <li>Tap <b>Save</b>.</li>
+                <li>Tap on the <em>Themes</em> tab.</li>
+                <li>Tap on the <span class="fas fa-chevron-right"></span> arrow to display the <em>Manage Themes</em> menu.</li>
+                <li>Tap on <em>Save Current Settings</em>.</li>
+                <li>Tap on the <span class="fas fa-pencil-alt"></span> icon to <em>Rename Theme</em>, or tap on the <span class="far fa-trash-alt"></span> icon to <em>Delete Theme</em>.</li>
+                <li>Tap <em>Save</em>.</li>
             </ol>
             <img class="twopanel" src="Daintree Images/Edit or Delete Theme.png" alt="Rename or Delete a Custom Theme">
         </div>
@@ -347,8 +372,8 @@
         <button class="accordion">Select a preset Text Display theme.</button>
         <div class="panel">
             <ol>
-                <li>Tap on the <b>Themes</b> tab.</li>
-                <li>Tap to select one of the 4 preset themes: <b>Compact, Standard, Large,</b> or <b>Low Vision</b><p class="smaller">If you do not see a preset theme option in the <b>Themes</b> tab, tap on the <span class="fas fa-chevron-right"></span> arrow to open the <b>Manage Themes</b> menu. Then tap the <span class="fas fa-toggle-on"></span> button next to a preset theme's name to toggle it ON/OFF. Themes toggled OFF are not visible in the <b>Themes</b> tab.</p></li>
+                <li>Tap on the <em>Themes</em> tab.</li>
+                <li>Tap to select one of the 4 preset themes: <em>Compact, Standard, Large,</em> or <em>Low Vision</em><p class="smaller">If you do not see a preset theme option in the <em>Themes</em> tab, tap on the <span class="fas fa-chevron-right"></span> arrow to open the <em>Manage Themes</em> menu. Then tap the <span class="fas fa-toggle-on"></span> button next to a preset theme's name to toggle it ON/OFF. Themes toggled OFF are not visible in the <em>Themes</em> tab.</p></li>
             </ol>
             <img class="twopanel" src="Daintree Images/Setting Preset Theme.png" alt="Selecting a Preset Text Display Theme">
             <p>
