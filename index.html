@@ -43,8 +43,8 @@
             object-fit: cover;
             object-position: -30px -30px;
         }
-        .header a:hover {
-            background-color: #4e4e4e39;
+        .img-container:hover {
+            background-color: #00ada164;
             color: black;
         }
         .dropdown-button {
@@ -64,12 +64,13 @@
             text-align: left;
             display: none;
             position: absolute;
-            background-color: hsla(225, 59%, 62%);
+            background-color: hsl(6, 88%, 93%); 
             width: 100%;
             overflow: auto;
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
             z-index: 1;
             font-size: 1.2em;
+            font-weight: 500;
         }
         .dropdown-content a {
             color: #4e4e4e;
@@ -77,26 +78,26 @@
             text-decoration: none;
             display: block;
         }
-        .dropdown-content a:hover {background-color: #004bad76}
+        .dropdown-content a:hover {background-color:#00ada164}
         .header-dropdown:hover .dropdown-content {
             display: block;
         }
         .header-dropdown:hover .dropdown-button {
-            background-color:#5272ff3a;
+            background-color:#00ada164;
         }
 /* HEADING STYLING */
         h1 {
-            margin: 20px 2px 30px 2px;
+            margin: 40px 2px 20px 2px;
             font-size: 3em;
             font-weight: 700;
         }
         h2 {
-            margin: 45px 2px 20px 25px;
+            margin: 45px 2px 15px 25px;
             font-size: 2em;
             font-weight: 700;
         }
         h3 {
-            margin: 32px 2px 20px 45px;
+            margin: 32px 2px 15px 45px;
             font-size: 1.5em;
             font-weight: 700;
         }
@@ -122,9 +123,9 @@
         }
 
         #introaccordion {
-            margin: 2px 2px 2px 60px;
+            margin: 2px 2px 20px 60px;
             font-size: 1.2em;
-            font-weight: bold;
+            font-weight: 600;
         }
 /* TEXT STYLING */
         em {
@@ -138,19 +139,19 @@
         }
 /* LIST STYLING */
         li {
-            padding: 0px 0px 10px 0px;
+            padding: 0px 0px 13px 0px;
         }
 
         .unordered {
-            padding: 0px 0px 10px 0px;
+            padding: 0px 0px 13px 0px;
         }
         ul {
-            margin: 2px 2px 2px 2px;
+            margin: 3px 2px 3px 2px;
         }
         .smaller {
             font-size: 0.9em;
             font-style: italic;
-            margin: 2px 2px 2px 2px;
+            margin: 4px 2px 4px 2px;
         }
 
 /* ACCORDION STYLING */
@@ -159,14 +160,14 @@
             color: rgb(175, 169, 169)
             cursor: pointer;
             padding: 1.5%;
-            width: 89%;
+            width: 100%;
             margin: 2px 2px 2px 60px;
             border: 2px solid black;
             text-align: left;
             outline: none;
             font-size: 1.1em;
             font-weight: 500;
-            transition: 0.4s;
+            transition: 0.3s;
         }
         .active, .accordion:hover {
             background-color: hsl(6, 88%, 93%); 
@@ -185,7 +186,7 @@
             padding: 0 18px;
             display: none;
             background-color:white;
-            overflow: hidden;
+            overflow: visible;
             margin: 2px 2px 2px 70px;
         }
 
@@ -236,7 +237,7 @@
                 Optimize your Daintree E-Reader's settings to enjoy a comfortable, intuitive reading experience.
             </p>
             <p id="chapterinfoxref">
-                For information about using the touch display to download and view documents, see <a href="linklanding.html">Navigating Your Daintree E-Reader</a>.
+                For information about using the touch display to download and view documents, see <a href="linklanding.html">Chapter 1: Navigating Your Daintree E-Reader</a>.
             </p>
             <h2>Customize Text Display</h2>
             <p id="sectionintro">
@@ -261,9 +262,9 @@
                 <li>Tap on the <em>Font</em> tab.</li>
                 <li>See the instructions below to change any of the following:</li>
                     <ul>
-                        <li class="unordered"><mark>Style</mark>: Tap the <span class="fas fa-chevron-right"></span> arrow to the right of <em>Font Family</em>. Then tap the circle to select a font style.</li>
-                        <li class="unordered"><mark>Weight</mark>: Tap the <span class="fas fa-chevron-right"></span> arrow to the right of <em>Bold</em>. Then tap the plus sign to increase the font weight or the minus sign to decrease the font weight.</li>
-                        <li class="unordered"><mark>Size</mark>: Tap the <span class="fas fa-chevron-right"></span> arrow to the right of <em>Size</em>. Then tap the plus sign to increase the font size or the minus sign to decrease the font size.</li>
+                        <li class="unordered"><mark>Style</mark>: Tap the <span class="fas fa-chevron-right"></span> arrow to the right of <em>Font Family</em>. Then tap the <i class="far fa-circle"></i> button to select a font style.</li>
+                        <li class="unordered"><mark>Weight</mark>: Tap the <span class="fas fa-chevron-right"></span> arrow to the right of <em>Bold</em>. Then tap the <i class="fas fa-plus"></i> sign to increase the font weight or the <i class="fas fa-minus"></i> sign to decrease the font weight.</li>
+                        <li class="unordered"><mark>Size</mark>: Tap the <span class="fas fa-chevron-right"></span> arrow to the right of <em>Size</em>. Then tap the <i class="fas fa-plus"></i> sign to increase the font size or the <i class="fas fa-minus"></i> sign to decrease the font size.</li>
                     </ul>
             </ol>
             <img class="twopanel" src="Daintree Images/Changing Font.png" alt="Changing Font Settings">
@@ -300,7 +301,7 @@
             <ol>
                 <li>Tap the <em>More</em> tab.</li>
                 <li>Tap the <span class="fas fa-chevron-right"></span> arrow located to the right of <em>Reading Progress</em> to open the <em>Reading Progress</em> menu.</li>
-                <li>Tap the circle to select the type of <em>Reading Progress</em> bar displayed when reading.
+                <li>Tap the <i class="far fa-circle"></i> button to select the type of <em>Reading Progress</em> bar displayed when reading.
             </ol>
             <img class="twopanel" src="Daintree Images/Reading Project Tab.png" alt="Changing Type of Reading Progress Bar">
         </div>
@@ -349,8 +350,8 @@
                 <li>Tap on <em>Save Current Settings</em>.</li>
                 <li>In the <em>Save Current Settings</em> menu, choose to do one of the following:</li>
                     <ul>
-                        <li class="unordered"><mark>Update an Existing Theme</mark>: Select the custom theme that you want to update with the current <em>Text Display</em> settings by tapping on the circle next to its name.</li>
-                        <li class="unordered"><mark>Create a New Theme</mark>: Tap on the circle next to <em>Create a New Theme</em>. Use the keyboard to type a name for your theme.</li>
+                        <li class="unordered"><mark>Update an Existing Theme</mark>: Select the custom theme that you want to update with the current <em>Text Display</em> settings by tapping on the <i class="far fa-circle"></i> button next to its name.</li>
+                        <li class="unordered"><mark>Create a New Theme</mark>: Tap on the <i class="far fa-circle"></i> button next to <em>Create a New Theme</em>. Use the keyboard to type a name for your theme.</li>
                     </ul>
                 <li>Tap <em>Save</em>.</li>
             </ol>
